@@ -33,11 +33,14 @@ module Decidim
       initializer "decidim_gallery.action_controller" do
         Rails.application.reloader.to_prepare do
           ActiveSupport.on_load :action_controller do
-            ::Decidim::Admin::StaticPagesController.helper Decidim::Gallery::Admin::ApplicationHelper
             ::Decidim::Admin::StaticPageForm.prepend Decidim::Gallery::Admin::StaticPages::Form
             ::Decidim::Admin::CreateStaticPage.prepend Decidim::Gallery::Admin::StaticPages::Command
             ::Decidim::Admin::UpdateStaticPage.prepend Decidim::Gallery::Admin::StaticPages::Command
           end
+        end
+
+        config.after_initialize do
+          ::Decidim::Admin::StaticPagesController.helper Decidim::Gallery::Admin::ApplicationHelper
         end
       end
 
