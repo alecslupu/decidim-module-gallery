@@ -15,6 +15,8 @@ gem "bootsnap", "~> 1.4"
 gem "faker", "~> 2.14"
 gem "rspec", "~> 3.13"
 
+gem "concurrent-ruby", "~> 1.1"
+
 group :development, :test do
   gem "brakeman", "~> 5.1"
   gem "byebug", "~> 11.0", platform: :mri
