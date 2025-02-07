@@ -11,15 +11,16 @@ gem "decidim-admin", DECIDIM_VERSION
 gem "decidim-core", DECIDIM_VERSION
 gem "decidim-gallery", path: ".."
 
+gem "activerecord", "~> 6.0"
+gem "activesupport", "~> 6.0"
+gem "rails", "~> 6.0.0"
+
 gem "bootsnap", "~> 1.7"
 gem "faker", "~> 2.14"
 gem "rspec", "~> 3.0"
 
-gem "concurrent-ruby", "~> 1.1"
-
 group :development, :test do
   gem "byebug", "~> 11.0", platform: :mri
-
   gem "decidim-dev", DECIDIM_VERSION
 end
 
