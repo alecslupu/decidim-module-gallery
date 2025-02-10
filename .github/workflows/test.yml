@@ -63,7 +63,7 @@ jobs:
           SIMPLECOV: 1
           CODECOV: 1
 
-      - uses: actions/upload-artifact@v2-preview
+      - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: screenshots
